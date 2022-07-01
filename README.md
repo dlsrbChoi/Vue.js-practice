@@ -1,4 +1,4 @@
-# Vue.js-practice
+# Vue.js-practice 시작하기
 
 https://www.inflearn.com/course/Age-of-Vuejs
 
