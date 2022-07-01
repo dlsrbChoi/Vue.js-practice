@@ -13,7 +13,7 @@
 </head>
 <body>
   <div id="app">
-    <p v-bind:class="{ warning: isError }">Hello</p>
+    <p v-bind:class="{ warning: errorTextColor }">Hello</p>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -23,6 +23,11 @@
       data: {
         //cname: 'blue-text',
         isError: false
+      },
+      computed: {
+        errorTextColor: function() {
+          return this.isError ? 'warning' : null;
+        }
       }
     });
   </script>
