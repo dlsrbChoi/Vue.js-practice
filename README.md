@@ -1,6 +1,9 @@
-# Vue.js-practice 시작하기
+# Vue.js-practice 시작하기 06.27
+# Vue.js 중급 강좌 07.04
 
 https://www.inflearn.com/course/Age-of-Vuejs
+
+https://www.inflearn.com/course/vue-pwa-vue-js-%EC%A4%91%EA%B8%89
 
 **Copyright © 2021 Captain Pangyo**
 
@@ -49,3 +52,10 @@ Vue.js
 - Vue.js 스타일 가이드 : https://v2.vuejs.org/v2/style-guide/
 - vue.js Cookbook : https://v2.vuejs.org/v2/cookbook/
 - vuex 공식 문서 : https://v3.vuex.vuejs.org/
+
+중급 강의
+1. 뷰 CLI를 이용한 프로젝트 구성 방법
+2. 컴포넌트 기반 설계 방법
+3. 컴포넌트 구조화 및 컴포넌트 통신 방법
+4. ES6를 이용한 효율적이고 간결한 뷰 코딩 방법
+5. Vuex를 이용한 상태 관리의 이해 및 적용 방법
