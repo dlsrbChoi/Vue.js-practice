@@ -3,7 +3,7 @@
     <transition-group name="list" tag="ul">
       <!-- ul>li*3 -->
     <!-- <ul> -->
-      <li v-for="(todoItem, index) in propsdata" v-bind:key="todoItem.item" class="shadow">
+      <li v-for="(todoItem, index) in this.$store.state.todoItems" v-bind:key="todoItem.item" class="shadow">
         <i class="checkBtn fa-solid fa-check" v-bind:class="{checkBtnCompleted: todoItem.completed}"
           v-on:click="toggleComplete(todoItem, index)"></i>
         <span v-bind:class="{textCompleted: todoItem.completed}">{{ todoItem.item }}</span>
@@ -18,31 +18,32 @@
 
 <script>
 export default {  
-  props: ['propsdata'],
-  // data: function() {
+  // props: ['propsdata'],
+  // data() {
   //   return {
   //     todoItems: []
   //   }
   // },
-  methods: {
-    removeTodo: function(todoItem, index) {
-      this.$emit('removeItem', todoItem, index);
+  methods: { 
+    removeTodo(todoItem, index) {
+      this.$store.commit('removeOneItem', {todoItem, index});
+    },
+      // this.$emit('removeItem', todoItem, index);
 
       // localStorage.removeItem(todoItem.item);
       // this.todoItems.splice(index, 1);
       // splice : JS 배열 API, 특정 index에서 하나를 지울 수 있음
-    },
-    // toggleComplete: function(todoItem) {
+    // toggleComplete(todoItem) {
     //   todoItem.completed = !todoItem.completed;
     //   // 로컬 스토리지의 데이터를 갱신
     //   localStorage.removeItem(todoItem.item);
     //   localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
     // }
-    toggleComplete: function(todoItem, index) {
-      this.$emit('toggleItem', todoItem, index);
+    toggleComplete(todoItem, index) {
+      this.$store.commit('toggleOneItem', {todoItem, index});
+      // this.$emit('toggleItem', todoItem, index);
     }
-  },
-  // created: function() {
+  // created() {
   //   if (localStorage.length > 0) {
   //     for (var i = 0; i < localStorage.length; i ++) {
   //       if (localStorage.key(i) !== '') {
@@ -54,6 +55,7 @@ export default {
   //     }
   //   }
   // }
+  }
 }
 </script>
 

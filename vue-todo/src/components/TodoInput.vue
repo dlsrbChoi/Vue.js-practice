@@ -26,31 +26,33 @@
 import Modal from './common/ModalComponent.vue';
 
 export default {
-  data: function() {
+  data() {
     return {
       newTodoItem: "",
       showModal: false
     }
   },
   methods: {
-    addTodo: function() {
+    addTodo() {
       if (this.newTodoItem !== '') {
         // var obj = { completed: false, item: this.newTodoItem };
         // //localStorage.setItem(this.newTodoItem, obj);
         // localStorage.setItem(this.newTodoItem, JSON.stringify(obj)); // 로컬스토리지 저장, JSON.stringify(obj) : 객체를 string으로 변환
-        this.$emit('addTodoItem', this.newTodoItem);
+        this.$store.commit('addOneItem', this.newTodoItem);
+        // this.$emit('addTodoItem', this.newTodoItem);
         // this.$emit('이벤트 이름', 인자1, 인자2, ...);
         this.clearInput();
       } else {
         this.showModal = !this.showModal;
       }
     },
-    clearInput: function() {
+    clearInput() {
       this.newTodoItem = '';
     }
   },
   components: {
-    Modal: Modal
+    // Modal: Modal
+    Modal
   }
 }
 </script>
