@@ -78,3 +78,10 @@ Vuex
 - getters: 연산된 state 값을 접근하는 속성 computed() 처럼 미리 연산된 값을 접근하는 속성
 - mutations: state 값을 변경하는 이벤트 로직 메서드 methods
 - actions: 비동기 처리 로직을 선언하는 메서드 aysnc methods
+
+Vuex Helper
+- 각 속성들을 더 쉽게 사용하는 방법
+- state -> mapState
+- getters -> mapGetters
+- mutations -> mapMutations
+- actions -> mapActions

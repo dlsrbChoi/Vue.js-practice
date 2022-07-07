@@ -1,7 +1,7 @@
 <template>
   <div class="inputBox shadow">
+    
     <input type="text" v-model="newTodoItem" v-on:keyup.enter="addTodo">
-    <!-- <button v-on:click="addTodo">add</button> -->
     <span class="addContainer" v-on:click="addTodo">
       <i class="fa-solid fa-plus addBtn"></i>
     </span>
@@ -14,11 +14,8 @@
       <h4 slot="body">
         아무것도 입력하시지 않으셨습니다.
       </h4>
-      <h3 slot="footer">
-        copy right
-      </h3>
-
     </modal>
+
   </div>
 </template>
 
@@ -35,12 +32,7 @@ export default {
   methods: {
     addTodo() {
       if (this.newTodoItem !== '') {
-        // var obj = { completed: false, item: this.newTodoItem };
-        // //localStorage.setItem(this.newTodoItem, obj);
-        // localStorage.setItem(this.newTodoItem, JSON.stringify(obj)); // 로컬스토리지 저장, JSON.stringify(obj) : 객체를 string으로 변환
         this.$store.commit('addOneItem', this.newTodoItem);
-        // this.$emit('addTodoItem', this.newTodoItem);
-        // this.$emit('이벤트 이름', 인자1, 인자2, ...);
         this.clearInput();
       } else {
         this.showModal = !this.showModal;
@@ -51,7 +43,6 @@ export default {
     }
   },
   components: {
-    // Modal: Modal
     Modal
   }
 }
