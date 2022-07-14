@@ -9,11 +9,11 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   component: AboutView
-  // },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+  },
   {
     path: '/example',
     name: 'Example',
@@ -66,6 +66,31 @@ const routes = [
     path: '/compositionapi4',
     name: 'CompositionAPI4',
     component: () => import(/* webpackChunkName: "CompositionAPI4" */ '../views/CompositionAPI4.vue')
+  },
+  {
+    path: '/compositionapiprovide',
+    name: 'CompositionAPIProvide',
+    component: () => import(/* webpackChunkName: "CompositionAPIProvide" */ '../views/CompositionAPIProvide.vue')
+  },
+  {
+    path: '/customdirective',
+    name: 'CustomDirective',
+    component: () => import(/* webpackChunkName: "CustomDirective" */ '../views/CustomDirective.vue')
+  },
+  {
+    path: '/plugins',
+    name: 'Plugins',
+    component: () => import(/* webpackChunkName: "Plugins" */ '../views/PluginsView.vue')
+  },
+  {
+    path: '/storeaccess',
+    name: 'StoreAccess',
+    component: () => import(/* webpackChunkName: "Plugins" */ '../views/StoreAccess.vue')
+  },
+  {
+    path: '/kakaologin',
+    name: 'KakaoLogin',
+    component: () => import(/* webpackChunkName: "Plugins" */ '../views/KakaoLogin.vue')
   },
 ]
 
