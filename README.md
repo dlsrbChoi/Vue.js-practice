@@ -2,8 +2,6 @@
 
 https://www.inflearn.com/course/Age-of-Vuejs
 
-https://www.inflearn.com/course/vue-pwa-vue-js-%EC%A4%91%EA%B8%89
-
 **Copyright © 2021 Captain Pangyo**
 
 설치목록
@@ -53,6 +51,10 @@ Vue.js
 - vuex 공식 문서 : https://v3.vuex.vuejs.org/
 
 # Vue.js 중급 강좌 07.04
+
+https://www.inflearn.com/course/vue-pwa-vue-js-%EC%A4%91%EA%B8%89
+
+**Copyright © 2021 Captain Pangyo**
 
 1. 뷰 CLI를 이용한 프로젝트 구성 방법
 2. 컴포넌트 기반 설계 방법
