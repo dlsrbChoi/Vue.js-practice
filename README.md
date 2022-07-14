@@ -1,5 +1,6 @@
 # Vue.js-practice 시작하기 06.27
 # Vue.js 중급 강좌 07.04
+# Vue.js 실무 강좌 07.14
 
 https://www.inflearn.com/course/Age-of-Vuejs
 
@@ -85,3 +86,19 @@ Vuex Helper
 - getters -> mapGetters
 - mutations -> mapMutations
 - actions -> mapActions
+
+https://www.inflearn.com/course/vue-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EB%B0%B0%EC%9B%8C%EB%B3%B4%EA%B8%B0#reviews
+
+**Copyright 2021 개발자의 품격(seungwongo)**
+
+실습목록
+- Router
+- Postman 서버
+- Vue 컴포넌트 개발(고급)
+- Slot
+- Provide/Inject
+- Mixins
+- Composition API
+- Custom Directives
+- Plugins
+- 소셜로그인 구현
